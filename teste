@@ -1,0 +1,123 @@
+Dado a sequência de Fibonacci, onde se inicia por 0 e 1 e o próximo valor sempre
+será a soma dos 2 valores anteriores (exemplo: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34...), escreva um programa na linguagem
+que desejar onde, informado um número, ele calcule a sequência de Fibonacci e retorne uma mensagem avisando
+se o número informado pertence ou não a sequência.
+
+IMPORTANTE: Esse número pode ser informado através de qualquer entrada de sua preferência ou pode ser previamente 
+definido no código;
+
+Python
+
+def fibonacci_sequence(n):
+    fib_sequence = [0, 1]
+    while fib_sequence[-1] < n:
+        fib_sequence.append(fib_sequence[-1] + fib_sequence[-2])
+    return fib_sequence
+
+def is_in_fibonacci(n):
+    fib_sequence = fibonacci_sequence(n)
+    if n in fib_sequence:
+        return f"O número {n} pertence à sequência de Fibonacci."
+    else:
+        return f"O número {n} não pertence à sequência de Fibonacci."
+
+# Número a ser verificado
+numero = int(input("Informe um número: "))
+print(is_in_fibonacci(numero))
+
+2) Escreva um programa que verifique, em uma string, a existência da letra ‘a’, seja maiúscula ou minúscula, 
+além de informar a quantidade de vezes em que ela ocorre.
+
+IMPORTANTE: Essa string pode ser informada através de qualquer entrada de sua preferência ou pode ser 
+previamente definida no código;
+
+Python
+
+def verificar_letra_a(string):
+    # Converte a string para minúscula para garantir que tanto 'A' quanto 'a' sejam contados
+    string = string.lower()
+    # Conta quantas vezes 'a' aparece na string
+    count_a = string.count('a')
+    
+    if count_a > 0:
+        print(f"A letra 'a' aparece {count_a} vezes.")
+    else:
+        print("A letra 'a' não foi encontrada.")
+
+# Exemplo de uso
+string = input("Digite uma string: ")
+verificar_letra_a(string)
+
+3) Observe o trecho de código abaixo: int INDICE = 12, SOMA = 0, K = 1; 
+enquanto K < INDICE faça { K = K + 1; SOMA = SOMA + K; } imprimir(SOMA);
+
+Ao final do processamento, qual será o valor da variável SOMA?
+
+Python
+
+INDICE = 12
+SOMA = 0
+K = 1
+
+while K < INDICE:
+    K += 1
+    SOMA += K
+
+print(SOMA)
+
+Ao final do processamento, o valor da variável SOMA será 77.
+
+4) Descubra a lógica e complete o próximo elemento:
+a) 1, 3, 5, 7, ___
+b) 2, 4, 8, 16, 32, 64, ____
+c) 0, 1, 4, 9, 16, 25, 36, ____
+d) 4, 16, 36, 64, ____
+e) 1, 1, 2, 3, 5, 8, ____
+f) 2,10, 12, 16, 17, 18, 19, ____
+
+a) 9 (soma de 2 ao último número)
+b) 128 (multiplicação por 2)
+c) 49 (quadrados perfeitos)
+d) 100 (quadrados de números pares)
+e) 13 (sequência de Fibonacci)
+f) 20 (sequência alternada, o próximo seria 20)
+
+5) Você está em uma sala com três interruptores, cada um conectado a uma lâmpada em salas diferentes.
+Você não pode ver as lâmpadas da sala em que está, mas pode ligar e desligar os interruptores quantas vezes quiser. 
+Seu objetivo é descobrir qual interruptor controla qual lâmpada. Como você faria para descobrir, 
+usando apenas duas idas até uma das salas das lâmpadas, qual interruptor controla cada lâmpada?  
+
+Ligue o primeiro interruptor e espere alguns minutos.
+Desligue o primeiro interruptor, ligue o segundo e vá para a sala das lâmpadas.
+A lâmpada acesa é do segundo interruptor, a lâmpada quente e apagada é do primeiro interruptor,
+e a fria e apagada é do terceiro interruptor.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
